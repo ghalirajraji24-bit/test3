@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Carte Anniversaire</title>
+
+<style>
+body{
+    margin:0;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+    background:linear-gradient(135deg,#ff6a00,#ee0979);
+    font-family:Arial, sans-serif;
+    overflow:hidden;
+}
+
+/* Lien bouton */
+a{
+    text-decoration:none;
+    background:white;
+    color:#ee0979;
+    padding:18px 45px;
+    font-size:22px;
+    border-radius:40px;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+a:hover{
+    transform:scale(1.1);
+}
+
+/* Message caché */
+#anniversaire{
+    display:none;
+    margin-top:40px;
+    font-size:60px;
+    text-align:center;
+    animation:zoom 2s infinite alternate, rainbow 4s linear infinite;
+}
+
+/* Animations */
+@keyframes zoom{
+    from{transform:scale(1);}
+    to{transform:scale(1.2);}
+}
+
+@keyframes rainbow{
+    0%{color:#ff0000;}
+    25%{color:#ffff00;}
+    50%{color:#00ff00;}
+    75%{color:#00ffff;}
+    100%{color:#ff00ff;}
+}
+</style>
+</head>
+
+<body>
+
+<a href="#" onclick="afficherMessage()">🎁 Appuyer</a>
+
+<div id="anniversaire">
+🎉 JOYEUX ANNIVERSAIRE BABA ,49 🎉
+</div>
+
+<script>
+function afficherMessage(){
+    document.getElementById("anniversaire").style.display="block";
+}
+</script>
+
+</body>
+</html>
